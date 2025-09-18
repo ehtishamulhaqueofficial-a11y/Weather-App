@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #00a9fd, #ffb703);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: serif;
+}
+
+.container {
+  background-color: #e9edc9;
+  height: 70vh;
+  width: 70vw;
+  max-width: 500px;
+  max-height: 600px;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+  padding: 2rem;
+}
+
+h2 {
+  margin-top: 1.3rem;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+form input {
+  flex: 1;
+  min-width: 0;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+form button {
+  flex-shrink: 0;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+form button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transition: 0.3s ease-in-out;
+}
+
+.result {
+    margin-top: 6rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+/* flex-shrink: 0;
+height: 25vh;
+width: 60%;
+max-width: 350px;
+background-color: rgb(216, 216, 216);
+border: 2px solid black;
+border-radius: 8px; */
+
+.marquee {
+  margin-top: 3rem;
+  margin-bottom: -4rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  font-size: 1rem;
+  font-weight: 900;
+  padding-right: 1rem;
+  height: 3rem;
+  padding-top: 0.9rem;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for "direction" */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* 📱 Extra Small screens (<360px) */
+@media (max-width: 360px) {
+  .container {
+    width: 95vw;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  form input,
+  form button {
+    width: 100%;
+    height: 3rem;
+    font-size: 0.9rem;
+  }
+
+  /* .result {
+    width: 90%;
+    height: 18vh;
+  } */
+}
+
+/* 📱 Small screens (<480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 90vw;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    flex-direction: row;
+    gap: 0.8rem;
+    max-width: 100%;
+  }
+
+  form button {
+    width: 30%;
+    font-size: 0.8rem;
+    height: 3.5rem;
+  }
+
+  form input {
+    width: 70%;
+    font-size: 1rem;
+    height: 3.5rem;
+  }
+
+  /* .result {
+    height: 20vh;
+    width: 80%;
+  } */
+}
+
+/* 📱 Tablets (<768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 80vw;
+    height: auto;
+    padding: 2rem;
+  }
+
+  /* .result {
+    width: 70%;
+    height: 22vh;
+  } */
+}
+
+/* 🖥️ Large desktops (>1200px) */
+@media (min-width: 1200px) {
+  .container {
+    width: 40vw;
+    height: 65vh;
+  }
+
+  /* .result {
+    width: 50%;
+    height: 25vh;
+  } */
+}
